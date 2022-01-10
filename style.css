@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+:root {
+    --light-green: #b8e0d2;
+    --dark-green: #2c7e63;
+    --light-pink: #eac4d5;
+    --dark-pink: #94486a;
+    --light-blue: #95b8d1;
+    --font-main: 'Playfair Display', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background: var(--dark-color);
+    font-family: var(--font-main);
+    color: #fff;
+}
+
+.container {
+    background: linear-gradient(235deg, rgba(255, 255, 255, 0.5), rgba(7, 6, 7, 0.5)), url('images/poet.png');
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 170vh;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hero-2 {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.author {
+    margin: 20px;
+}
+
+.author img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.component-1,
+.component-2,
+.component-3,
+.component-4,
+.component-5 {
+    background: linear-gradient(225deg, rgba(44, 126, 99, 0.7), rgba(148, 72, 106, 0.7));
+    box-shadow: 5px 5px rgb(250, 244, 244, 0.5);
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 3%;
+    border-radius: 20px;
+    text-align: center;
+    font-family: var(--font-secondary);
+}
+
+.component-1:hover,
+.component-2:hover,
+.component-3:hover,
+.component-4:hover,
+.component-5:hover {
+    opacity: 0.6;
+}
+
+.component {
+    background: linear-gradient(135deg, rgba(44, 126, 99, 0.7), rgba(148, 72, 106, 0.7));
+    box-shadow: 5px 5px rgb(250, 244, 244, 0.5);
+    width: 90%;
+    height: 80vh;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 20px;
+    color: var(--dark-green);
+    text-align: center;
+}
+
+.component h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.component p {
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: justify;
+    color: #fff;
+    line-height: 30px;
+    margin: 40px;
+}
+
+h1 {
+    font-family: var(--font-main);
+    font-size: 70px;
+    text-shadow: 3px 3px var(--dark-green);
+}
+
+
+/* for custom scroll */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light-green);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--light-pink));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--dark-green));
+}
+
+
+/* for responsive mobile css */
+
+.line {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    position: absolute;
+    background: var(--light-color);
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    margin-top: 2rem;
+}
+
+.nav-links {
+    position: fixed;
+    background: linear-gradient(245deg, var(--light-pink), var(--light-green));
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10;
+    padding: 0;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+    list-style: none;
+}
+
+.nav-links.open {
+    clip-path: circle(2000px at -10% 90%);
+    -webkit-clip-path: circle(2000px at -10% 90%);
+    pointer-events: all;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing h1 {
+    margin: 100px;
+    font-size: 50px;
+    color: var(--dark-color);
+}
+
+.nav-links li {
+    opacity: 0;
+    top: 0;
+}
+
+.nav-links li a {
+    font-size: 20px;
+    color: var(--light-color);
+    list-style: none;
+}
+
+.nav-links li:nth-child(even) {
+    transition: all 0.5s ease 0.4s;
+}
+
+.nav-links li:nth-child(odd) {
+    transition: all 0.5s ease 0.6s;
+}
+
+li.fade {
+    opacity: 1;
+}
+
+.userside {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    width: 80%;
+    align-content: center;
+    text-align: center;
+}
+
+.userside img {
+    background-color: var(--light-color);
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.userside img:hover,
+.fixed-bottom img:hover {
+    opacity: 0.5;
+}
+
+.userside p,
+.userside a {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 0.1rem;
+    margin-top: 0.5rem;
+}
+
+.userside a {
+    color: var(--light-color);
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.dashboard,
+.pages,
+.settings {
+    margin: 0 auto;
+    width: 60%;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.dashboard p,
+.pages p,
+.userside p {
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+.dashboard p,
+.pages p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.settings {
+    font-family: var(--font-secondary);
+    color: var(--dark-pink);
+}
+
+.dashboard li a,
+.pages li a,
+.settings li a {
+    text-align: left;
+    text-decoration: none;
+}
+
+.dashboard li a:hover,
+.pages li a:hover,
+.settings li a:hover {
+    max-width: 100px;
+    color: var(--dark-pink);
+    cursor: pointer;
+}
+
+.dashboard .label,
+.pages .label {
+    align-items: center;
+    text-decoration: none;
+}
+
+.settings li a {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        height: auto;
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 20px;
+    }
+    .hero-2 {
+        margin: 0 auto;
+    }
+    .component-1,
+    .component-2,
+    .component-3,
+    .component-4 {
+        width: 75vh;
+        padding: 20px;
+        text-align: center;
+    }
+    .header {
+        margin-top: 20px;
+    }
+    .author img {
+        width: 200px;
+        height: 200px;
+        ;
+    }
+    .component {
+        height: 60vh;
+        margin-bottom: 20px;
+    }
+    /* for menubar */
+    .hamburger {
+        position: flex;
+        background: var(--light-color);
+        cursor: pointer;
+        left: 2%;
+        transform: translate(-5%, -10%);
+        z-index: 2;
+        width: 35px;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 30%;
+        justify-content: space-around;
+        align-items: left;
+        margin-left: auto;
+        clip-path: circle(100px at -50% 50%);
+        -webkit-clip-path: circle(100px at -50% 50%);
+        gap: 30px;
+        padding: 1rem;
+    }
+    .dashboard,
+    .pages,
+    .settings {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .dashboard li a,
+    .pages li a,
+    .settings li a {
+        margin: 1rem;
+        text-align: left;
+    }
+    .dashboard p,
+    .pages p {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+    .settings {
+        margin-top: 0.2rem;
+    }
+}
