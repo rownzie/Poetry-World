@@ -90,6 +90,18 @@ a:link {
     font-family: var(--font-secondary);
 }
 
+.component-1 a,
+.component-2 a,
+.component-3 a,
+.component-4 a,
+.component-5 a {
+    list-style: none;
+}
+
+a:link {
+    list-style: none;
+}
+
 .component-1:hover,
 .component-2:hover,
 .component-3:hover,
