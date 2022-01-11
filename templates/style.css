@@ -33,11 +33,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 auto;
+    padding: 40px;
 }
 
-.container-1 {
+
+/* .container-1 {
     height: 195vh;
-}
+} */
 
 .container-2 {
     height: 115vh;
@@ -64,17 +66,19 @@ body {
 
 .header {
     margin: 0 auto;
-    margin-top: 10px;
+    width: auto;
+    text-align: center;
 }
 
 h1 {
     font-family: var(--font-main);
     font-size: 70px;
+    text-align: center;
     text-shadow: 3px 3px var(--dark-green);
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 16px;
     color: #000;
 }
 
@@ -85,11 +89,12 @@ h3 {
 .component-5 {
     background: linear-gradient(135deg, rgba(44, 126, 99, 0.7), rgba(148, 72, 106, 0.7));
     box-shadow: 0 0px 5px rgb(250, 244, 244, 0.5);
-    width: 90%;
+    width: auto;
     height: auto;
     padding: 20px;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 20px;
     color: var(--dark-green);
     text-align: center;
@@ -114,23 +119,8 @@ h3 {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-}
-
-.component-1 p,
-.component-4 p,
-.component-5 p {
     line-height: 30px;
     margin-top: 15px;
-}
-
-.component-2 p {
-    line-height: 30px;
-    margin-top: 18px;
-}
-
-.component-3 p {
-    line-height: 50px;
-    margin-top: 18px;
 }
 
 
@@ -337,26 +327,32 @@ li.fade {
 
 @media screen and (min-width: 768px) {
     .hero {
-        margin-top: 20px;
-        width: 60%;
+        width: auto;
     }
-    .header {
-        margin-top: 20px;
-    }
-    .container-2 {
-        height: auto;
-    }
-    .container-3 {
-        height: auto;
+    .container-1,
+    .container-3,
+    .container-4 {
+        height: 100vh;
     }
     .component-1,
     .component-2,
     .component-3,
     .component-4,
     .component-5 {
-        width: 100vh;
         height: auto;
-        margin: 40PX;
+        margin: 40px;
+    }
+    .component-1,
+    .component-4 {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 20px;
+    }
+    .component-1 p,
+    .component-4 p,
+    .component-5 p {
+        line-height: 30px;
+        margin-top: 5px;
     }
     /* for menubar */
     .hamburger {
@@ -372,7 +368,7 @@ li.fade {
         display: flex;
         flex-direction: column;
         list-style: none;
-        width: 30%;
+        width: 40%;
         justify-content: space-around;
         align-items: left;
         margin-left: auto;

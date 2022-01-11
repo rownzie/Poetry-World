@@ -324,7 +324,7 @@ li.fade {
         display: flex;
         flex-direction: column;
         list-style: none;
-        width: 30%;
+        width: 40%;
         justify-content: space-around;
         align-items: left;
         margin-left: auto;

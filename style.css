@@ -27,10 +27,22 @@ body {
     background: linear-gradient(235deg, rgba(255, 255, 255, 0.5), rgba(7, 6, 7, 0.5)), url('images/poet.png');
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     background-size: cover;
     background-repeat: no-repeat;
+    height: auto;
     margin: 0 auto;
-    height: 170vh;
+    padding: 20px;
+}
+
+.container>div {
+    margin: 20px;
+}
+
+h1 {
+    font-family: var(--font-main);
+    font-size: 70px;
+    text-shadow: 3px 3px var(--dark-green);
 }
 
 .hero {
@@ -41,20 +53,25 @@ body {
 }
 
 .container h2 {
-    margin-top: 10px;
+    margin: 0 auto;
     text-align: center;
+    font-size: 30px;
 }
 
-.hero-2 {
+.hero-2,
+.hero-3 {
     display: block;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.hero>div {
+    margin: 10px;
+}
+
 .header {
     margin: 0 auto;
-    margin-top: 10px;
+    width: auto;
 }
 
 .author {
@@ -80,14 +97,20 @@ a:link {
 .component-5 {
     background: linear-gradient(225deg, rgba(44, 126, 99, 0.7), rgba(148, 72, 106, 0.7));
     box-shadow: 5px 5px rgb(250, 244, 244, 0.5);
-    width: 90%;
-    height: auto;
+    width: 300px;
     padding: 20px;
     margin: 0 auto;
-    margin-top: 3%;
     border-radius: 20px;
     text-align: center;
     font-family: var(--font-secondary);
+}
+
+.component-1 h3,
+.component-2 h3,
+.component-3 h3,
+.component-4 h3,
+.component-5 h3 {
+    font-size: 12px;
 }
 
 .component-1 a,
@@ -110,40 +133,38 @@ a:link {
     opacity: 0.6;
 }
 
-.component {
+.component-one,
+.component-two {
     background: linear-gradient(135deg, rgba(44, 126, 99, 0.7), rgba(148, 72, 106, 0.7));
     box-shadow: 5px 5px rgb(250, 244, 244, 0.5);
-    width: 90%;
-    height: 80vh;
-    padding: 20px;
     margin: 0 auto;
-    margin-top: 5%;
+    padding: 20px;
     border-radius: 20px;
     color: var(--dark-green);
     text-align: center;
 }
 
-.component h2 {
-    margin-top: 50px;
+.pic img {
+    margin: 10px;
+}
+
+.component-one h2,
+.component-two h2 {
+    margin-top: 20px;
     font-size: 30px;
     font-weight: bolder;
     color: #fff;
 }
 
-.component p {
+.component-one p,
+.component-two p {
     font-family: var(--font-secondary);
     font-size: 15px;
     font-weight: bold;
     text-align: justify;
     color: #fff;
     line-height: 30px;
-    margin: 40px;
-}
-
-h1 {
-    font-family: var(--font-main);
-    font-size: 70px;
-    text-shadow: 3px 3px var(--dark-green);
+    margin: 10px 40px 40px 40px;
 }
 
 
@@ -212,19 +233,6 @@ nav {
     clip-path: circle(2000px at -10% 90%);
     -webkit-clip-path: circle(2000px at -10% 90%);
     pointer-events: all;
-}
-
-.landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.landing h1 {
-    margin: 100px;
-    font-size: 50px;
-    color: var(--dark-color);
 }
 
 .nav-links li {
@@ -349,13 +357,10 @@ li.fade {
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        height: auto;
-    }
     .hero {
         display: grid;
         grid-template-columns: auto auto;
-        margin: 20px;
+        margin: 10px;
     }
     .hero-2 {
         margin: 0 auto;
@@ -364,21 +369,21 @@ li.fade {
     .component-2,
     .component-3,
     .component-4 {
-        width: 75vh;
-        padding: 20px;
+        width: 400px;
         text-align: center;
     }
-    .header {
-        margin-top: 20px;
+    .header h1 {
+        text-align: center;
     }
     .author img {
         width: 200px;
         height: 200px;
         ;
     }
-    .component {
-        height: 60vh;
-        margin-bottom: 20px;
+    .component-one,
+    .component-two {
+        margin: 20px;
+        margin: 0 auto;
     }
     /* for menubar */
     .hamburger {
@@ -394,7 +399,7 @@ li.fade {
         display: flex;
         flex-direction: column;
         list-style: none;
-        width: 30%;
+        width: 40%;
         justify-content: space-around;
         align-items: left;
         margin-left: auto;
