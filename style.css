@@ -33,6 +33,7 @@ body {
     height: auto;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .container>div {
@@ -105,12 +106,21 @@ a:link {
     font-family: var(--font-secondary);
 }
 
+.component-1 h2,
+.component-2 h2,
+.component-3 h2,
+.component-4 h2,
+.component-5 h2 {
+    color: var(--light-color);
+}
+
 .component-1 h3,
 .component-2 h3,
 .component-3 h3,
 .component-4 h3,
 .component-5 h3 {
     font-size: 12px;
+    color: var(--light-color);
 }
 
 .component-1 a,
@@ -119,10 +129,12 @@ a:link {
 .component-4 a,
 .component-5 a {
     list-style: none;
+    color: var(--light-color);
 }
 
 a:link {
     list-style: none;
+    color: var(--light-color);
 }
 
 .component-1:hover,
