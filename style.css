@@ -6,7 +6,6 @@
     --light-pink: #eac4d5;
     --dark-pink: #94486a;
     --light-blue: #95b8d1;
-    --light-color: #fff;
     --font-main: 'Playfair Display', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 }
@@ -112,7 +111,7 @@ a:link {
 .component-3 h2,
 .component-4 h2,
 .component-5 h2 {
-    color: var(--light-color);
+    color: #fff;
 }
 
 .component-1 h3,
@@ -121,7 +120,7 @@ a:link {
 .component-4 h3,
 .component-5 h3 {
     font-size: 12px;
-    color: var(--light-color);
+    color: #fff;
 }
 
 .component-1 a,
@@ -130,12 +129,12 @@ a:link {
 .component-4 a,
 .component-5 a {
     list-style: none;
-    color: var(--light-color);
+    color: #fff;
 }
 
 a:link {
     list-style: none;
-    color: var(--light-color);
+    color: #fff;
 }
 
 .component-1:hover,
@@ -217,7 +216,6 @@ nav {
 
 .hamburger {
     position: absolute;
-    background: var(--light-color);
     cursor: pointer;
     right: 5%;
     top: 50%;
@@ -255,7 +253,6 @@ nav {
 
 .nav-links li a {
     font-size: 20px;
-    color: var(--light-color);
     list-style: none;
 }
 
@@ -352,8 +349,7 @@ li.fade {
 }
 
 .dashboard li a:hover,
-.pages li a:hover,
-.settings li a:hover {
+.pages li a:hover {
     max-width: 100px;
     color: var(--dark-pink);
     cursor: pointer;
@@ -367,6 +363,11 @@ li.fade {
 
 .settings li a {
     font-size: 16px;
+    color: var(--dark-pink);
+}
+
+.settings li a:hover {
+    color: var(--dark-green);
 }
 
 @media screen and (min-width: 768px) {
@@ -401,7 +402,6 @@ li.fade {
     /* for menubar */
     .hamburger {
         position: flex;
-        background: var(--light-color);
         cursor: pointer;
         left: 2%;
         transform: translate(-5%, -10%);
